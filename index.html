@@ -99,7 +99,7 @@
     .logo-mark::after { content: ""; position: absolute; width: 17px; height: 17px; right: 4px; top: 4px; border: 4px solid #d7b46a; border-radius: 50%; }
     .logo-copy { display: grid; gap: 1px; line-height: 1; }
     .logo-name { font-size: 23px; font-weight: 430; letter-spacing: -.045em; }
-    .logo-subtitle { color: #8e764a; font-size: 8px; font-weight: 650; letter-spacing: .25em; text-transform: lowercase; }
+    .logo-subtitle { color: #8e764a; font-size: 12.144px; font-weight: 650; letter-spacing: .25em; text-transform: lowercase; }
     .menu-toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 108px; min-height: 48px; padding: 0 21px; border: 1px solid #111513; border-radius: 999px; color: white; background: #111513; box-shadow: 0 10px 24px rgba(17,21,19,.2); cursor: pointer; font-size: 14px; font-weight: 750; transition: transform .2s, background .2s, box-shadow .2s; }
     .menu-toggle:hover { background: #292e2c; box-shadow: 0 13px 30px rgba(17,21,19,.27); transform: translateY(-2px); }
     .hamburger { display: none; width: 22px; height: 16px; position: relative; }
@@ -142,11 +142,11 @@
     @keyframes yandex-fly-in { 0% { opacity: 0; transform: translateX(-110px); filter: blur(8px); } 72% { opacity: 1; transform: translateX(3px); filter: blur(0); } 100% { opacity: 1; transform: translateX(0); filter: blur(0); } }
     @keyframes direct-fly-in { 0% { opacity: 0; transform: translateX(110px); filter: blur(8px); } 72% { opacity: 1; transform: translateX(-3px); filter: blur(0); } 100% { opacity: 1; transform: translateX(0); filter: blur(0); } }
     @keyframes symbol-appear { 0% { opacity: 0; transform: scale(.82); filter: blur(10px); } 70% { opacity: 1; transform: scale(1.035); filter: blur(0); } 100% { opacity: 1; transform: scale(1); filter: blur(0); } }
-    .hero-title-copy { display: block; opacity: 0; transform: translateY(14px); animation: title-copy-reveal 1.5s ease 2.04s forwards; }
+    .hero-title-copy { display: block; opacity: 0; transform: translateY(14px); animation: title-copy-reveal 1s ease 1.36s forwards; }
     @keyframes title-copy-reveal { to { opacity: 1; transform: translateY(0); } }
-    .hero-thin { font-weight: 350; }
+    .hero-thin { font-size: .9em; font-weight: 350; }
     .hero-title-copy em { position: relative; display: inline-block; color: var(--green); font-family: Georgia, serif; font-weight: 500; }
-    .hero-title-copy em::after { content: ""; position: absolute; left: 3%; right: 0; bottom: -14px; height: 12px; border-top: 4px solid #c5a66f; border-radius: 50%; opacity: 0; transform: rotate(-1deg) scaleX(0); transform-origin: left center; animation: underline-draw 1.9s cubic-bezier(.2,.75,.2,1) 3.4s forwards; }
+    .hero-title-copy em::after { content: ""; position: absolute; left: 3%; right: 0; bottom: -14px; height: 12px; border-top: 4px solid #c5a66f; border-radius: 50%; opacity: 0; transform: rotate(-1deg) scaleX(0); transform-origin: left center; animation: underline-draw 1.27s cubic-bezier(.2,.75,.2,1) 2.27s forwards; }
     @keyframes underline-draw { 0% { opacity: 0; transform: rotate(-1deg) scaleX(0); } 15% { opacity: 1; } 100% { opacity: 1; transform: rotate(-1deg) scaleX(1); } }
     @media (prefers-reduced-motion: reduce) { .yd-part, .hero-title-copy, .hero-title-copy em::after { animation: none !important; opacity: 1; filter: none; transform: none; } }
     .hero-copy { max-width: 710px; margin-bottom: 36px; color: var(--muted); font-size: 20px; }
@@ -170,8 +170,13 @@
     .mini-number { margin: 5px 0 2px; font-size: 54px; font-weight: 680; letter-spacing: -.06em; line-height: 1; }
     .mini-number span { color: #5b9c75; font-size: 26px; }
     .bars { display: flex; align-items: end; gap: 7px; height: 78px; margin: 23px 0 15px; }
-    .bars i { display: block; flex: 1; height: var(--h); border-radius: 7px 7px 2px 2px; background: var(--sage); }
-    .bars i:last-child { background: var(--green); }
+    .bars i { display: block; flex: 1; height: var(--h); border-radius: 7px 7px 2px 2px; }
+    .bars i:nth-child(1) { background: linear-gradient(180deg, #edf4ea, #d2e4d0); }
+    .bars i:nth-child(2) { background: linear-gradient(180deg, #e0eedf, #bdd9bf); }
+    .bars i:nth-child(3) { background: linear-gradient(180deg, #d1e7d3, #a5cca9); }
+    .bars i:nth-child(4) { background: linear-gradient(180deg, #bbdcbe, #87bb91); }
+    .bars i:nth-child(5) { background: linear-gradient(180deg, #98cba4, #5f9f79); }
+    .bars i:nth-child(6) { background: linear-gradient(180deg, #69aa8b, var(--green)); }
     .campaign-caption { margin: auto 0 0; padding-top: 15px; border-top: 1px solid var(--line); color: #40534f; font-size: 12px; font-weight: 650; line-height: 1.4; }
     .campaign-controls { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 12px; }
     .campaign-arrow { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; color: var(--green); background: rgba(255,253,250,.8); cursor: pointer; box-shadow: 0 10px 25px rgba(23,49,45,.1); }
@@ -211,14 +216,6 @@
     .trust-card:nth-child(3) .trust-art { animation-delay: -1.4s; }
     .trust-card:nth-child(4) .trust-art { animation-delay: -2.1s; }
     @keyframes art-float { 0%,100% { transform: translateY(3px) rotate(-1deg); } 50% { transform: translateY(-8px) rotate(1deg); } }
-    .coin-spin { transform-box: fill-box; transform-origin: center; animation: coin-spin 4s ease-in-out infinite; }
-    @keyframes coin-spin {
-      0% { transform: scaleY(1); filter: brightness(1); }
-      25% { transform: scaleY(.16); filter: brightness(.76); }
-      50% { transform: scaleY(-1); filter: brightness(.94); }
-      75% { transform: scaleY(-.16); filter: brightness(.76); }
-      100% { transform: scaleY(1); filter: brightness(1); }
-    }
     .coin-drop { animation: coin-drop 2.3s ease-in-out infinite; }
     .coin-drop.two { animation-delay: -.8s; }
     @keyframes coin-drop { 0% { transform: translateY(-10px); opacity: 0; } 30%,75% { opacity: 1; } 100% { transform: translateY(45px); opacity: 0; } }
@@ -230,7 +227,7 @@
     .trust-index { display: block; margin-bottom: 7px; color: #a48a61; font: 14px Georgia,serif; }
     .trust-card h3 { margin-bottom: 10px; font-size: 21px; line-height: 1.2; }
     .trust-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
-    @media (prefers-reduced-motion: reduce) { .trust-card, .trust-art, .coin-spin, .coin-drop, .chart-rise, .arrow-pulse { animation: none !important; transition: none !important; } .trust-card { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .trust-card, .trust-art, .coin-drop, .chart-rise, .arrow-pulse { animation: none !important; transition: none !important; } .trust-card { opacity: 1; transform: none; } }
 
     /* Principles */
     .principles { background: var(--white); }
@@ -250,13 +247,13 @@
     .journey-meta strong { color: #a16a51; font-weight: 750; }
     .journey-step h3 { margin-bottom: 10px; font-size: 20px; line-height: 1.18; }
     .journey-step p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
-    .application-journey.in-view .journey-line-fill { animation: journey-line-draw 8s cubic-bezier(.2,.7,.2,1) .3s forwards; }
-    .application-journey.in-view .journey-courier { animation: journey-courier 8s cubic-bezier(.2,.7,.2,1) .3s forwards; }
-    .application-journey.in-view .journey-step { animation: journey-step-in 1.25s cubic-bezier(.16,.82,.24,1) forwards; }
-    .application-journey.in-view .journey-step:nth-child(3) { animation-delay: .5s; }
-    .application-journey.in-view .journey-step:nth-child(4) { animation-delay: 2.65s; }
-    .application-journey.in-view .journey-step:nth-child(5) { animation-delay: 4.8s; }
-    .application-journey.in-view .journey-step:nth-child(6) { animation-delay: 6.9s; }
+    .application-journey.in-view .journey-line-fill { animation: journey-line-draw 6.67s cubic-bezier(.2,.7,.2,1) .25s forwards; }
+    .application-journey.in-view .journey-courier { animation: journey-courier 6.67s cubic-bezier(.2,.7,.2,1) .25s forwards; }
+    .application-journey.in-view .journey-step { animation: journey-step-in 1.04s cubic-bezier(.16,.82,.24,1) forwards; }
+    .application-journey.in-view .journey-step:nth-child(3) { animation-delay: .42s; }
+    .application-journey.in-view .journey-step:nth-child(4) { animation-delay: 2.21s; }
+    .application-journey.in-view .journey-step:nth-child(5) { animation-delay: 4s; }
+    .application-journey.in-view .journey-step:nth-child(6) { animation-delay: 5.75s; }
     .application-journey.in-view .journey-node { animation: journey-node-breathe 3.8s ease-in-out infinite; }
     @keyframes journey-line-draw { to { transform: scaleX(1); } }
     @keyframes journey-courier { 0% { left: calc(10% - 11px); opacity: 0; transform: scale(.7); } 5% { opacity: 1; transform: scale(1); } 94% { opacity: 1; } 100% { left: calc(90% - 11px); opacity: 0; transform: scale(.8); } }
@@ -267,10 +264,20 @@
     /* Services */
     .services { background: var(--sage-2); }
     .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-    .service-card { display: flex; flex-direction: column; min-height: 360px; padding: 30px; border: 1px solid rgba(40,95,84,.1); border-radius: var(--radius); background: rgba(255,253,250,.84); transition: transform .25s, box-shadow .25s; }
+    .service-card { --service-tone: 114,151,132; position: relative; display: flex; flex-direction: column; min-height: 360px; padding: 30px; border: 1px solid rgba(40,95,84,.1); border-radius: var(--radius); background: radial-gradient(circle at 87% 58%, rgba(var(--service-tone),.16), transparent 42%), rgba(255,253,250,.9); overflow: hidden; isolation: isolate; transition: transform .25s, box-shadow .25s; }
+    .service-card:nth-child(2) { --service-tone: 105,139,145; }
+    .service-card:nth-child(3) { --service-tone: 184,151,92; }
+    .service-card:nth-child(4) { --service-tone: 81,139,124; }
+    .service-card:nth-child(5) { --service-tone: 199,157,75; }
+    .service-card:nth-child(6) { --service-tone: 112,132,125; }
     .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-    .service-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 56px; border-radius: 16px; color: var(--green); background: var(--sage); font-size: 24px; }
-    .service-card p { color: var(--muted); font-size: 14px; }
+    .service-card > :not(.service-backdrop) { position: relative; z-index: 2; }
+    .service-backdrop { position: absolute; z-index: 0; right: 0; bottom: 34px; width: 220px; height: 220px; color: rgb(var(--service-tone)); opacity: .18; pointer-events: none; transform: none; transition: opacity .3s ease, transform .45s ease; }
+    .service-backdrop::before { content: ""; position: absolute; inset: 16px; border: 1px solid currentColor; border-radius: 50%; opacity: .34; transform: none; }
+    .service-backdrop svg { position: relative; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card:hover .service-backdrop { opacity: .25; transform: scale(1.035); }
+    .service-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 56px; border-radius: 16px; color: var(--green); background: rgba(var(--service-tone),.16); font-size: 24px; }
+    .service-card p { max-width: 86%; color: var(--muted); font-size: 14px; }
     .service-card .text-link { margin-top: auto; font-size: 14px; }
 
     /* Losses */
@@ -499,6 +506,46 @@
     .price small { font-size: 13px; font-weight: 500; opacity: .6; }
     .featured .btn-secondary { color: var(--green); background: var(--white); }
     .price-foot { max-width: 760px; margin: 36px auto 0; color: var(--muted); text-align: center; font-size: 14px; }
+    .pricing-showcase .intro { margin-bottom: 54px; }
+    .pricing-showcase .price-card { position: relative; min-height: 590px; overflow: hidden; }
+    .pricing-showcase .price-card::after { content: ""; position: absolute; right: -58px; bottom: -78px; width: 180px; height: 180px; border: 1px solid rgba(40,95,84,.1); border-radius: 50%; box-shadow: 0 0 0 28px rgba(40,95,84,.035), 0 0 0 56px rgba(40,95,84,.025); pointer-events: none; }
+    .pricing-showcase .price-card.featured::after { border-color: rgba(255,255,255,.14); box-shadow: 0 0 0 28px rgba(255,255,255,.035), 0 0 0 56px rgba(255,255,255,.025); }
+    .price-badge { align-self: flex-start; margin-top: 2px; padding: 7px 11px; border-radius: 999px; color: var(--green); background: var(--sage); font-size: 11px; font-weight: 750; }
+    .featured .price-badge { color: var(--green); background: var(--sand); }
+    .price-value { display: flex; align-items: baseline; gap: 6px; margin-top: auto; margin-bottom: 22px; font-size: 38px; font-weight: 700; letter-spacing: -.045em; }
+    .price-value small { font-size: 12px; font-weight: 550; letter-spacing: 0; opacity: .62; }
+    .maintenance-panel { margin-top: 34px; padding: 36px; border: 1px solid rgba(40,95,84,.13); border-radius: 30px; background: linear-gradient(135deg, #edf5ef, #f8f7f1 58%, #f6ead3); box-shadow: 0 20px 50px rgba(23,49,45,.08); }
+    .maintenance-head { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 26px; }
+    .maintenance-head h3 { margin: 7px 0 0; font-size: 32px; }
+    .maintenance-head p { max-width: 440px; margin: 0; color: var(--muted); font-size: 14px; }
+    .maintenance-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .maintenance-tier { padding: 22px; border: 1px solid rgba(40,95,84,.11); border-radius: 20px; background: rgba(255,255,255,.72); backdrop-filter: blur(8px); }
+    .maintenance-tier span { display: block; margin-bottom: 12px; color: var(--muted); font-size: 12px; }
+    .maintenance-tier strong { display: block; color: var(--ink); font-size: 25px; letter-spacing: -.035em; }
+    .maintenance-tier small { display: block; margin-top: 7px; color: #74847f; font-size: 11px; line-height: 1.45; }
+    .budget-note { display: grid; grid-template-columns: 44px 1fr; gap: 16px; max-width: 900px; margin: 22px auto 0; padding: 22px 24px; border: 1px solid #ead8b8; border-radius: 20px; background: #fff9ed; color: var(--muted); font-size: 13px; }
+    .budget-note-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--green); background: var(--sand); font-size: 20px; font-weight: 750; }
+    .budget-note strong { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; }
+    .pricing-showcase.pricing-animated .price-card, .pricing-showcase.pricing-animated .maintenance-panel, .pricing-showcase.pricing-animated .budget-note { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.22,.7,.25,1); }
+    .pricing-showcase.pricing-animated.in-view .price-card, .pricing-showcase.pricing-animated.in-view .maintenance-panel, .pricing-showcase.pricing-animated.in-view .budget-note { opacity: 1; transform: translateY(0); }
+    .pricing-showcase.pricing-animated.in-view .price-card:nth-child(2) { transition-delay: .12s; }
+    .pricing-showcase.pricing-animated.in-view .price-card:nth-child(3) { transition-delay: .24s; }
+    .pricing-showcase.pricing-animated.in-view .maintenance-panel { transition-delay: .36s; }
+    .pricing-showcase.pricing-animated.in-view .budget-note { transition-delay: .48s; }
+    @media (min-width: 981px) { .pricing-showcase.pricing-animated.in-view .price-card.featured { transform: translateY(-12px); } }
+    @media (max-width: 760px) {
+      .pricing-showcase .intro { margin-bottom: 34px; }
+      .pricing-showcase .price-card { min-height: 0; padding: 26px; }
+      .pricing-showcase .price-card h3 { font-size: 27px; }
+      .price-value { margin-top: 4px; font-size: 34px; }
+      .maintenance-panel { padding: 24px; border-radius: 24px; }
+      .maintenance-head { display: block; }
+      .maintenance-head h3 { margin-bottom: 12px; font-size: 27px; }
+      .maintenance-grid { grid-template-columns: 1fr; }
+      .budget-note { grid-template-columns: 38px 1fr; padding: 18px; }
+      .budget-note-icon { width: 38px; height: 38px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .pricing-showcase.pricing-animated .price-card, .pricing-showcase.pricing-animated .maintenance-panel, .pricing-showcase.pricing-animated .budget-note { opacity: 1; transform: none; transition: none; } }
 
     /* About */
     .about { background: var(--white); }
@@ -587,7 +634,7 @@
       .logo-mark { width: 38px; height: 38px; }
       .logo-mark::after { width: 15px; height: 15px; right: 3px; top: 3px; border-width: 3px; }
       .logo-name { font-size: 18px; }
-      .logo-subtitle { font-size: 6.5px; letter-spacing: .2em; }
+      .logo-subtitle { font-size: 9.867px; letter-spacing: .2em; }
       .menu-toggle { min-height: 46px; width: 46px; }
       .hero { padding-top: 130px; }
       .hero-copy { font-size: 17px; }
@@ -663,7 +710,7 @@
       <a class="logo" href="#top" aria-label="Точка роста — digital агентство"><span class="logo-mark" aria-hidden="true"></span><span class="logo-copy"><span class="logo-name">Точка роста</span><span class="logo-subtitle">digital агентство</span></span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="menu-toggle-text">Меню</span><span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span></button>
       <nav class="menu-panel" id="main-menu" aria-label="Основная навигация">
-        <a href="#services">Услуги</a><a href="#deliverables">Что получите</a><a href="#process">Как работаем</a><a href="#prices">Стоимость</a><a href="#about">О нас</a><a class="menu-cta" href="#contact">Обсудить проект</a>
+        <a href="#services">Услуги</a><a href="#deliverables">Что получите</a><a href="#prices">Стоимость</a><a href="#about">О нас</a><a class="menu-cta" href="#contact">Обсудить проект</a>
       </nav>
     </div>
   </header>
@@ -720,14 +767,25 @@
           <article class="trust-card" style="--delay:0s">
             <div class="trust-visual">
               <svg class="trust-art" viewBox="0 0 180 180" aria-hidden="true">
-                <defs><linearGradient id="coinTop" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7e4b9"/><stop offset="1" stop-color="#c89b52"/></linearGradient><linearGradient id="coinSide" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b68039"/><stop offset="1" stop-color="#7d5423"/></linearGradient></defs>
-                <ellipse cx="90" cy="137" rx="52" ry="18" fill="#153e37" opacity=".16"/>
-                <path d="M47 115v18c0 11 19 20 43 20s43-9 43-20v-18z" fill="url(#coinSide)"/><ellipse cx="90" cy="115" rx="43" ry="20" fill="url(#coinTop)" stroke="#fff3d5" stroke-width="3"/>
-                <path d="M53 93v18c0 10 17 19 37 19s37-9 37-19V93z" fill="url(#coinSide)"/><ellipse cx="90" cy="93" rx="37" ry="18" fill="url(#coinTop)" stroke="#fff3d5" stroke-width="3"/>
-                <g class="coin-spin"><circle cx="90" cy="75" r="31" fill="url(#coinSide)" stroke="#e6bd73" stroke-width="4"/><circle cx="90" cy="66" r="31" fill="url(#coinTop)" stroke="#fff3d5" stroke-width="4"/><path d="M61 72c4 18 54 18 58 0" fill="none" stroke="#b47c32" stroke-width="3" opacity=".55"/><text x="90" y="78" text-anchor="middle" font-size="35" font-weight="700" fill="#285f54">₽</text></g>
+                <defs>
+                  <linearGradient id="budgetCoin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff2cc"/><stop offset=".52" stop-color="#ebc77f"/><stop offset="1" stop-color="#c99543"/></linearGradient>
+                  <linearGradient id="budgetCoinSide" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c18a3d"/><stop offset="1" stop-color="#79501f"/></linearGradient>
+                </defs>
+                <ellipse cx="90" cy="147" rx="49.3" ry="12.75" fill="#153e37" opacity=".15"/>
+                <g transform="translate(13.5 15) scale(.85)">
+                <path d="M45 119v14c0 10 20 18 45 18s45-8 45-18v-14z" fill="url(#budgetCoinSide)"/>
+                <ellipse cx="90" cy="119" rx="45" ry="18" fill="url(#budgetCoin)" stroke="#fff3d3" stroke-width="3"/>
+                <path d="M45 99v14c0 10 20 18 45 18s45-8 45-18V99z" fill="url(#budgetCoinSide)"/>
+                <ellipse cx="90" cy="99" rx="45" ry="18" fill="url(#budgetCoin)" stroke="#fff3d3" stroke-width="3"/>
+                <path d="M45 79v14c0 10 20 18 45 18s45-8 45-18V79z" fill="url(#budgetCoinSide)"/>
+                <ellipse cx="90" cy="79" rx="45" ry="18" fill="url(#budgetCoin)" stroke="#fff3d3" stroke-width="3"/>
+                <path d="M45 59v14c0 10 20 18 45 18s45-8 45-18V59z" fill="url(#budgetCoinSide)"/>
+                <ellipse cx="90" cy="59" rx="45" ry="18" fill="url(#budgetCoin)" stroke="#fff3d3" stroke-width="3"/>
+                <path d="M61 55c10-7 46-8 61 0" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/>
+                </g>
               </svg>
             </div>
-            <div class="trust-copy"><span class="trust-index">01</span><h3>Можно начать с небольшого бюджета</h3><p>Выбираем одно приоритетное направление и сначала проверяем спрос.</p></div>
+            <div class="trust-copy"><span class="trust-index">01</span><h3>Экономный старт</h3><p>Работаем и с начинающими компаниями, и с крупным бюджетом.</p></div>
           </article>
           <article class="trust-card" style="--delay:.12s">
             <div class="trust-visual">
@@ -741,7 +799,7 @@
                 <circle cx="90" cy="119" r="13" fill="#e9d4ad"/><path d="m84 119 4 4 8-9" fill="none" stroke="#285f54" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="trust-copy"><span class="trust-index">02</span><h3>Не расходуем деньги на всё подряд</h3><p>Отсекаем нецелевые запросы, площадки и аудитории до масштабирования.</p></div>
+            <div class="trust-copy"><span class="trust-index">02</span><h3>Используем бюджет точечно</h3><p>Отсекаем нецелевые запросы, площадки и аудитории до масштабирования.</p></div>
           </article>
           <article class="trust-card" style="--delay:.24s">
             <div class="trust-visual">
@@ -804,12 +862,12 @@
       <div class="container">
         <div class="intro"><div><span class="section-label">Услуги</span><h2>Можно начать с одной конкретной задачи</h2></div><p>Не обязательно покупать большой пакет. Подберём объём работы под этап бизнеса и доступный бюджет.</p></div>
         <div class="services-grid">
-          <article class="service-card"><div class="service-icon">⌕</div><h3>Настройка Яндекс Директа</h3><p>Изучаем спрос, собираем семантику, создаём объявления и запускаем кампании.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
-          <article class="service-card"><div class="service-icon">↗</div><h3>Ведение и оптимизация</h3><p>Контролируем расходы, тестируем гипотезы и развиваем работающие направления.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
-          <article class="service-card"><div class="service-icon">◫</div><h3>Аудит кампаний</h3><p>Находим потери бюджета и формируем конкретный план улучшений.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
-          <article class="service-card"><div class="service-icon">⌁</div><h3>Настройка аналитики</h3><p>Настраиваем Метрику, цели, UTM-метки и отслеживание обращений.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
-          <article class="service-card"><div class="service-icon">◎</div><h3>Экономный старт</h3><p>Выбираем одно приоритетное направление и запускаем компактную кампанию для проверки спроса.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
-          <article class="service-card"><div class="service-icon">◇</div><h3>Анализ сайта</h3><p>Проверяем посадочную страницу и находим, что мешает пользователю обратиться.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
+          <article class="service-card"><div class="service-backdrop" aria-hidden="true"><svg viewBox="0 0 240 180"><circle cx="102" cy="78" r="38"/><circle cx="102" cy="78" r="23"/><path d="m130 106 31 31M54 40h55M48 119h54M157 51h30M168 72h22"/><circle cx="163" cy="137" r="10"/></svg></div><div class="service-icon">⌕</div><h3>Настройка Яндекс Директа</h3><p>Изучаем спрос, собираем семантику, создаём объявления и запускаем кампании.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
+          <article class="service-card"><div class="service-backdrop" aria-hidden="true"><svg viewBox="0 0 240 180"><path d="M43 132V45M43 132h154"/><path d="m58 115 35-31 28 15 47-53"/><path d="m151 47 19-3-2 20"/><circle cx="58" cy="115" r="6"/><circle cx="93" cy="84" r="6"/><circle cx="121" cy="99" r="6"/></svg></div><div class="service-icon">↗</div><h3>Ведение и оптимизация</h3><p>Контролируем расходы, тестируем гипотезы и развиваем работающие направления.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
+          <article class="service-card"><div class="service-backdrop" aria-hidden="true"><svg viewBox="0 0 240 180"><rect x="56" y="30" width="106" height="125" rx="13"/><path d="M81 63h55M81 86h39M81 109h48"/><circle cx="160" cy="118" r="29"/><path d="m181 140 18 18M148 118l8 8 16-20"/></svg></div><div class="service-icon">◫</div><h3>Аудит кампаний</h3><p>Находим потери бюджета и формируем конкретный план улучшений.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
+          <article class="service-card"><div class="service-backdrop" aria-hidden="true"><svg viewBox="0 0 240 180"><rect x="40" y="31" width="158" height="117" rx="16"/><path d="M62 126V98M88 126V77M114 126V91M140 126V57M166 126V70"/><path d="m60 73 28-17 28 11 29-28 24 8"/><circle cx="88" cy="56" r="5"/><circle cx="145" cy="39" r="5"/></svg></div><div class="service-icon">⌁</div><h3>Настройка аналитики</h3><p>Настраиваем Метрику, цели, UTM-метки и отслеживание обращений.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
+          <article class="service-card"><div class="service-backdrop" aria-hidden="true"><svg viewBox="0 0 240 180"><circle cx="119" cy="91" r="54"/><circle cx="119" cy="91" r="35"/><circle cx="119" cy="91" r="14"/><path d="M119 25v18M119 139v18M53 91h18M167 91h18"/><path d="m104 107 15-16 16-26"/><circle cx="119" cy="91" r="5"/></svg></div><div class="service-icon">◎</div><h3>Экономный старт</h3><p>Выбираем одно приоритетное направление и запускаем компактную кампанию для проверки спроса.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
+          <article class="service-card"><div class="service-backdrop" aria-hidden="true"><svg viewBox="0 0 240 180"><rect x="39" y="29" width="160" height="119" rx="14"/><path d="M39 58h160M57 44h1M70 44h1M83 44h1"/><rect x="59" y="78" width="56" height="48" rx="6"/><path d="M130 82h48M130 99h37M130 116h42"/><path d="m160 126 12 12 22-28"/></svg></div><div class="service-icon">◇</div><h3>Анализ сайта</h3><p>Проверяем посадочную страницу и находим, что мешает пользователю обратиться.</p><a class="text-link" href="#contact">Подробнее <span class="arrow">→</span></a></article>
         </div>
       </div>
     </section>
@@ -893,62 +951,23 @@
       </div>
     </section>
 
-    <section class="section" id="process">
+    <section class="section pricing-showcase" id="prices">
       <div class="container">
-        <div class="intro"><div><span class="section-label">Процесс</span><h2>Сначала проверяем — потом увеличиваем бюджет</h2></div><p>На каждом этапе понятно, что мы делаем, сколько это стоит и какие данные получили.</p></div>
-        <div class="process-track">
-          <article class="step"><div class="step-top"><span class="step-num">1</span><span class="step-time">Знакомство</span></div><h3>Погружаемся в бизнес</h3><p>Обсуждаем продукт, аудиторию, средний чек и цели рекламы.</p></article>
-          <article class="step"><div class="step-top"><span class="step-num">2</span><span class="step-time">Анализ</span></div><h3>Изучаем данные</h3><p>Проверяем спрос, конкурентов, сайт и действующую аналитику.</p></article>
-          <article class="step"><div class="step-top"><span class="step-num">3</span><span class="step-time">Стратегия</span></div><h3>Строим план</h3><p>Определяем структуру, форматы, прогноз и метрики эффективности.</p></article>
-          <article class="step"><div class="step-top"><span class="step-num">4</span><span class="step-time">Запуск</span></div><h3>Настраиваем рекламу</h3><p>Готовим кампании, объявления, аудитории и цели.</p></article>
-          <article class="step"><div class="step-top"><span class="step-num">5</span><span class="step-time">Данные</span></div><h3>Проверяем качество</h3><p>Анализируем запросы, площадки, трафик и первые обращения.</p></article>
-          <article class="step"><div class="step-top"><span class="step-num">6</span><span class="step-time">Рост</span></div><h3>Оптимизируем</h3><p>Убираем лишнее и масштабируем работающие направления.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="transparent section">
-      <div class="container transparent-card folder-interactive" id="folder-interactive">
-        <div class="transparency-copy">
-          <div class="transparency-text"><span class="section-label">Без рекламного тумана</span><h2>Небольшой бюджет тоже заслуживает полной прозрачности</h2><p class="lead">Кабинет, данные и накопленная статистика принадлежат вам — независимо от размера проекта.</p></div>
-          <div class="check-list">
-            <button class="check-item active" type="button" data-document="launch"><span class="tiny-check">01</span><p>План запуска и согласованная структура</p></button>
-            <button class="check-item" type="button" data-document="budget"><span class="tiny-check">02</span><p>Расчёт бюджета до начала работы</p></button>
-            <button class="check-item" type="button" data-document="access"><span class="tiny-check">03</span><p>Доступы к вашему рекламному аккаунту</p></button>
-            <button class="check-item" type="button" data-document="report"><span class="tiny-check">04</span><p>Отчёт с расходами, заявками и выводами</p></button>
-            <button class="check-item" type="button" data-document="growth"><span class="tiny-check">05</span><p>План оптимизации на следующий период</p></button>
-          </div>
-        </div>
-
-        <div class="folder-demo">
-          <div class="folder-scene" aria-label="Интерактивная папка документов проекта">
-            <span class="folder-label">Папка вашего проекта</span>
-            <div class="project-folder">
-              <div class="folder-back"><span>ТОЧКА РОСТА</span></div>
-              <button class="document-sheet active" type="button" data-document="launch" style="--x:-18px;--y:4px;--r:-3deg;--delay:.08s"><strong>План запуска</strong></button>
-              <button class="document-sheet" type="button" data-document="budget" style="--x:-9px;--y:-4px;--r:-1.5deg;--delay:.16s"><strong>Расчёт бюджета</strong></button>
-              <button class="document-sheet" type="button" data-document="access" style="--x:0px;--y:-12px;--r:0deg;--delay:.24s"><strong>Доступы</strong></button>
-              <button class="document-sheet" type="button" data-document="report" style="--x:9px;--y:-20px;--r:1.5deg;--delay:.32s"><strong>Отчёт</strong></button>
-              <button class="document-sheet" type="button" data-document="growth" style="--x:18px;--y:-28px;--r:3deg;--delay:.4s"><strong>План оптимизации</strong></button>
-              <div class="folder-front"><span>Ваш проект</span><i>5 документов</i></div>
-            </div>
-          </div>
-          <div class="folder-footer">
-            <button class="folder-next" type="button">Следующий документ →</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="prices">
-      <div class="container">
-        <div class="intro"><div><span class="section-label">Стоимость</span><h2>Форматы для разных этапов бизнеса</h2></div><p>Начнём с необходимого минимума и не будем добавлять работы, которые сейчас не влияют на результат.</p></div>
+        <div class="intro"><div><span class="section-label">Стоимость</span><h2>Понятные форматы запуска и ведения</h2></div><p>Можно начать с одной кампании, проверить спрос и перейти к более широкой системе только тогда, когда это действительно нужно.</p></div>
         <div class="pricing-grid">
-          <article class="price-card"><span class="price-kicker">Первый шаг</span><h3>Экономный старт</h3><p>Для небольшого бизнеса, который хочет проверить Директ без широкого запуска.</p><div class="price-list"><span>Один приоритетный продукт</span><span>Один регион</span><span>Поисковая кампания</span><span>Метрика и основные цели</span></div><div class="price">от ХХ ХХХ ₽</div><a class="btn btn-secondary" href="#contact">Рассчитать старт</a></article>
-          <article class="price-card featured"><span class="price-kicker">Комплексный запуск</span><h3>Система</h3><p>Для бизнеса с несколькими направлениями и задачей стабильного привлечения клиентов.</p><div class="price-list"><span>Анализ ниши</span><span>Полная семантика</span><span>Поиск и РСЯ</span><span>Метрика и цели</span><span>Первичная оптимизация</span></div><div class="price">от ХХ ХХХ ₽</div><a class="btn btn-secondary" href="#contact">Обсудить запуск</a></article>
-          <article class="price-card"><span class="price-kicker">После запуска</span><h3>Ведение</h3><p>Регулярно улучшаем кампании и не позволяем бюджету расходоваться по инерции.</p><div class="price-list"><span>Контроль расходов</span><span>Анализ обращений</span><span>Чистка трафика</span><span>Тест гипотез</span><span>Понятный отчёт</span></div><div class="price">от ХХ ХХХ ₽ <small>/ месяц</small></div><a class="btn btn-secondary" href="#contact">Оставить заявку</a></article>
+          <article class="price-card"><span class="price-kicker">Первый шаг</span><h3>Экономный старт</h3><span class="price-badge">Для точечной проверки спроса</span><p>Запускаем компактную кампанию по одному приоритетному направлению.</p><div class="price-list"><span>Один продукт и один регион</span><span>Поисковая кампания</span><span>Яндекс Метрика и цели</span><span>Запуск и первичная оптимизация</span></div><div class="price-value">19 900 ₽</div><a class="btn btn-secondary" href="#contact">Рассчитать старт</a></article>
+          <article class="price-card featured"><span class="price-kicker">Комплексный запуск</span><h3>Система</h3><span class="price-badge">Для нескольких направлений</span><p>Собираем полноценную рекламную систему и тестируем разные способы привлечения клиентов.</p><div class="price-list"><span>Несколько продуктов или регионов</span><span>Поиск, РСЯ и ретаргетинг</span><span>Аналитика и структура целей</span><span>Тестирование объявлений</span></div><div class="price-value">49 900 ₽</div><a class="btn btn-secondary" href="#contact">Обсудить запуск</a></article>
+          <article class="price-card"><span class="price-kicker">Большая структура</span><h3>Масштабный запуск</h3><span class="price-badge">Для сложных проектов</span><p>Настраиваем многоуровневую структуру для широкого ассортимента и нескольких рынков.</p><div class="price-list"><span>Много продуктов и регионов</span><span>Фиды и сегментация аудиторий</span><span>Коллтрекинг</span><span>Расширенная аналитика</span></div><div class="price-value"><small>от</small> 89 900 ₽</div><a class="btn btn-secondary" href="#contact">Получить расчёт</a></article>
         </div>
-        <p class="price-foot">После короткого разговора оценим спрос и предложим минимальный разумный бюджет. Если он не позволит собрать данные, честно скажем об этом до запуска.</p>
+        <div class="maintenance-panel">
+          <div class="maintenance-head"><div><span class="section-label">После запуска</span><h3>Ведение рекламных кампаний</h3></div><p>Следим за расходами, качеством обращений и постепенно улучшаем результат. Масштаб работ зависит от количества кампаний и объёма данных.</p></div>
+          <div class="maintenance-grid">
+            <div class="maintenance-tier"><span>Небольшой проект</span><strong>15 900 ₽ / мес.</strong><small>Одна компактная рекламная система</small></div>
+            <div class="maintenance-tier"><span>Средний проект</span><strong>34 900 ₽ / мес.</strong><small>Несколько направлений и регулярные тесты</small></div>
+            <div class="maintenance-tier"><span>Крупный проект</span><strong>от 49 900 ₽ / мес.</strong><small>Или 10–15% рекламного бюджета</small></div>
+          </div>
+        </div>
+        <div class="budget-note"><span class="budget-note-icon">₽</span><div><strong>Рекламный бюджет оплачивается отдельно — напрямую Яндексу</strong>Для небольшого теста обычно закладывают около 30–60 тысяч рублей в месяц. Точная сумма зависит от ниши, региона и стоимости обращения.</div></div>
       </div>
     </section>
 
@@ -985,7 +1004,7 @@
     <section class="cta" id="contact">
       <div class="container cta-box">
         <div><span class="section-label">Начнём с расчёта</span><h2>Узнайте, с какого бюджета можно начать в вашей нише</h2><p>Расскажите о продукте, регионе и возможностях бизнеса. Мы оценим спрос и предложим компактный формат запуска без лишних расходов.</p></div>
-        <form class="form" onsubmit="event.preventDefault(); alert('Форма пока работает в демонстрационном режиме. Перед запуском подключите отправку заявок.');">
+        <form class="form" onsubmit="event.preventDefault(); alert('Это демонстрационная форма. Подключите её к форме Tilda.');">
           <input type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
           <input type="text" name="contact" placeholder="Телефон или Telegram" aria-label="Телефон или Telegram">
           <input type="url" name="site" placeholder="Адрес сайта, если есть" aria-label="Адрес сайта">
@@ -1125,38 +1144,22 @@
     budgetRange.addEventListener('input', updateBudgetPreview);
     updateBudgetPreview();
 
-    const folderInteractive = document.getElementById('folder-interactive');
-    const folderOrder = ['launch', 'budget', 'access', 'report', 'growth'];
-    const documentButtons = [...folderInteractive.querySelectorAll('[data-document]')];
-    const folderNext = folderInteractive.querySelector('.folder-next');
-    let activeDocument = 'launch';
-    function activateFolderDocument(name) {
-      activeDocument = name;
-      documentButtons.forEach((button) => {
-        const isActive = button.dataset.document === name;
-        button.classList.toggle('active', isActive);
-        button.setAttribute('aria-pressed', String(isActive));
-      });
-    }
-    documentButtons.forEach((button) => button.addEventListener('click', () => activateFolderDocument(button.dataset.document)));
-    folderNext.addEventListener('click', () => {
-      const nextIndex = (folderOrder.indexOf(activeDocument) + 1) % folderOrder.length;
-      activateFolderDocument(folderOrder[nextIndex]);
-    });
-    activateFolderDocument(activeDocument);
-
-    if ('IntersectionObserver' in window) {
-      const folderObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('ready');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: .22 });
-      folderObserver.observe(folderInteractive);
-    } else {
-      folderInteractive.classList.add('ready');
+    const pricingShowcase = document.querySelector('.pricing-showcase');
+    if (pricingShowcase) {
+      pricingShowcase.classList.add('pricing-animated');
+      if ('IntersectionObserver' in window) {
+        const pricingObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: .12 });
+        pricingObserver.observe(pricingShowcase);
+      } else {
+        pricingShowcase.classList.add('in-view');
+      }
     }
 
     const applicationJourney = document.getElementById('application-journey');
